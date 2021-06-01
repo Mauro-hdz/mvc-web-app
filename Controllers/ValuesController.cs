@@ -17,6 +17,7 @@ namespace MvcWebApp.Controllers
         public IEnumerable<string> Get()
         {
             //test comment
+            //test comment 2
             return new string[] { "value1", "value2" };
         }
 
