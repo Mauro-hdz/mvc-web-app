@@ -16,6 +16,7 @@ namespace MvcWebApp.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         {
+            //test comment
             return new string[] { "value1", "value2" };
         }
 
