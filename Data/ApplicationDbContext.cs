@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using MvcWebApp.Models;
 
 namespace MvcWebApp.Data
 {
@@ -12,5 +13,6 @@ namespace MvcWebApp.Data
             : base(options)
         {
         }
+        public DbSet<MvcWebApp.Models.Email> Email { get; set; }
     }
 }
