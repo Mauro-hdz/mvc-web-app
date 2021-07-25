@@ -54,7 +54,7 @@ namespace MvcWebApp.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,EmailAddress")] Email email)
+        public async Task<IActionResult> Create([Bind("Id,Name,EmailAddress")] Email email)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace MvcWebApp.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,EmailAddress")] Email email)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,EmailAddress")] Email email)
         {
             if (id != email.Id)
             {
