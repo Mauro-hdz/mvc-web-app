@@ -31,6 +31,14 @@ namespace MvcWebApp.Controllers
             return View();
         }
 
+        //POST: Emails/ShowSearchResults
+        public async Task<IActionResult> ShowSearchResults(string SearchEmail)
+        {
+            var relevantEmails = await _context.Email.Where(email => email.EmailAddress.Contains(SearchEmail)).ToListAsync(); 
+
+            return View("Index", relevantEmails);
+        }
+
         // GET: Emails/Details/5
         public async Task<IActionResult> Details(int? id)
         {
